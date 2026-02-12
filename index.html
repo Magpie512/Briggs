@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Mars & Alex</title>
+    <link rel="stylesheet" href="styles/scrapbook.css">
+</head>
+<body>
+    <div class="scrapbook-book">
+        <div class="page active" id="page-1">
+            <header class="header-tape">
+                <h1>Mars & Alex</h1>
+                <p>Valentine's 2026</p>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame"><img src="photo1.jpg" class="scrapbook-image"></div>
+                    <p class="caption">The First Chapter.</p>
+                </section>
+                <section class="memo-pad">
+                    <h3>The Spark</h3>
+                    <p>It started with a single conversation. Alex, I knew then this would be a long story.</p>
+                </section>
+            </main>
+        </div>
+
+        <div class="page" id="page-2">
+            <header class="header-tape">
+                <h1>Our Adventures</h1>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame"><img src="photo2.jpg" class="scrapbook-image"></div>
+                    <p class="caption">That summer night.</p>
+                </section>
+                <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame"><img src="photo3.jpg" class="scrapbook-image"></div>
+                    <p class="caption">Lost in the city.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="controls">
+        <button onclick="prevPage()">Back</button>
+        <button onclick="nextPage()">Flip Page</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
