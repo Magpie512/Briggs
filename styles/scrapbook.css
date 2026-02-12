@@ -6,86 +6,17 @@ body {
     color: #4a3b33;
     display: flex;
     justify-content: center;
-    padding: 50px;
-}
-
-.scrapbook-container {
-    max-width: 900px;
-    background: #fffef0;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 1px solid #d1c7bc;
-    position: relative;
-}
-
-.header-tape {
-    text-align: center;
-    background: rgba(255, 182, 193, 0.5);
-    padding: 10px;
-    margin-bottom: 40px;
-    transform: rotate(-1deg);
-    border-left: 15px solid rgba(255, 255, 255, 0.3);
-    border-right: 15px solid rgba(255, 255, 255, 0.3);
-}
-
-.page-spread {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.polaroid {
-    background: white;
-    padding: 15px 15px 40px 15px;
-    box-shadow: 3px 5px 15px rgba(0,0,0,0.2);
-    border: 1px solid #eee;
-}
-
-.photo-placeholder {
-    width: 100%;
-    height: 200px;
-    background: #e0e0e0;
-    display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.rotate-left { transform: rotate(-3deg); }
-.rotate-right { transform: rotate(2deg); }
-
-.memo-pad {
-    background: #fff9c4;
-    padding: 20px;
-    border-radius: 2px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-}
-
-.sticker {
-    position: absolute;
-    font-size: 2rem;
-    pointer-events: none;
-    user-select: none;
-    z-index: 10;
-}
-
-.scrapbook-image {
-    width: 100%;
-    height: 200px; /* Match the height of your placeholder */
-    object-fit: cover; /* This crops the image perfectly to fit the box */
-    border: 1px solid #ddd;
-}
-
-.date {
-    font-size: 0.8rem;
-    color: #999;
-    margin-top: 5px;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 .scrapbook-book {
     position: relative;
-    width: 900px;
-    height: 600px;
-    perspective: 1500px; /* Gives the 3D flip effect depth */
+    width: 800px;
+    height: 550px;
+    perspective: 2000px;
 }
 
 .page {
@@ -94,22 +25,108 @@ body {
     height: 100%;
     background: #fffef0;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     border: 1px solid #d1c7bc;
-    transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s;
-    transform-origin: left center; /* Hinges the page like a book spine */
+    transition: transform 0.8s ease-in-out, opacity 0.6s ease-in-out;
+    transform-origin: left center;
     backface-visibility: hidden;
-    display: none; /* Hide pages by default */
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .page.active {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
     z-index: 2;
 }
 
-/* The "Flipped" animation class */
 .page.flipped {
     transform: rotateY(-180deg);
     opacity: 0;
-    pointer-events: none;
+    z-index: 0;
+}
+
+/* Decorative Elements */
+.header-tape {
+    text-align: center;
+    background: rgba(255, 182, 193, 0.4);
+    padding: 10px;
+    margin-bottom: 30px;
+    transform: rotate(-1deg);
+    border-left: 10px solid rgba(255,255,255,0.5);
+    border-right: 10px solid rgba(255,255,255,0.5);
+}
+
+.page-spread {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 3px 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.photo-frame {
+    width: 100%;
+    height: 180px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.scrapbook-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rotate-left { transform: rotate(-3deg); }
+.rotate-right { transform: rotate(2deg); }
+
+.memo-pad {
+    background: #fff9c4;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Clickable Corners */
+.corner-flip {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: linear-gradient(135deg, transparent 50%, #f0d9c4 50%, #d1c7bc 100%);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.corner-flip:hover {
+    width: 80px;
+    height: 80px;
+}
+
+.corner-flip.back {
+    right: auto;
+    left: 0;
+    background: linear-gradient(225deg, transparent 50%, #f0d9c4 50%, #d1c7bc 100%);
+}
+
+.big-heart {
+    font-size: 5rem;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #a67c52;
+    margin-top: 5px;
 }

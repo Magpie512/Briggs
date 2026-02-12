@@ -1,52 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story | Mars & Alex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/scrapbook.css">
 </head>
+
 <body>
+
     <div class="scrapbook-book">
         <div class="page active" id="page-1">
             <header class="header-tape">
                 <h1>Mars & Alex</h1>
-                <p>Valentine's 2026</p>
+                <p>Valentine's Day 2026</p>
             </header>
             <main class="page-spread">
                 <section class="photo-slot polaroid rotate-left">
-                    <div class="photo-frame"><img src="photo1.jpg" class="scrapbook-image"></div>
-                    <p class="caption">The First Chapter.</p>
+                    <div class="photo-frame">
+                        <img src="img/BeforeDatingArcade.jpg" alt="Memory One" class="scrapbook-image">
+                    </div>
+                    <p class="caption">Where it <span style="text-decoration: underline;">We</span> began.</p>
+                    <p class="date">22nd August 2025</p>
                 </section>
                 <section class="memo-pad">
-                    <h3>The Spark</h3>
-                    <p>It started with a single conversation. Alex, I knew then this would be a long story.</p>
+                    <h3>A Note for You</h3>
+                    <p>Hey Bunny, <br>this page is a collection of the moments that define our journey so far. Click the
+                        corner to see more.
+                        <br>
+                        PS. I think I wanna repurpose this site for all our future memories too. A digital scrap book
+                        for our lives together.
+                    </p>
+                    <div class="heart-sticker">~❤</div>
                 </section>
-            </main>
+                <div class="corner-flip" onclick="nextPage()"></div>
         </div>
 
         <div class="page" id="page-2">
             <header class="header-tape">
-                <h1>Our Adventures</h1>
+                <h1>Our Journey</h1>
             </header>
             <main class="page-spread">
                 <section class="photo-slot polaroid rotate-right">
-                    <div class="photo-frame"><img src="photo2.jpg" class="scrapbook-image"></div>
-                    <p class="caption">That summer night.</p>
+                    <div class="photo-frame">
+                        <img src="img/BeholdCat.png"
+                            alt="Alex holding the high looking garfield cat I got her for christmas"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">It really started here.</p>
+                    <p class="date">24th January 2025</p>
                 </section>
                 <section class="photo-slot polaroid rotate-left">
-                    <div class="photo-frame"><img src="photo3.jpg" class="scrapbook-image"></div>
-                    <p class="caption">Lost in the city.</p>
+                    <div class="photo-frame">
+                        <img src="img/DressToImpress.jpg" alt="Alex playing Dress to Impress on my bed"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">Then months later..</p>
                 </section>
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+        <div class="page" id="page-3">
+            <header class="header-tape">
+                <h1>We spent alot of time together</h1>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame">
+                        <img src="img/RocksByBeach.jpg" alt="Alex and I by the rocks at the beach"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">A downtown walk by the beach.</p>
+                </section>
+                <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame">
+                        <img src="img/TrainToConcert.jpg" alt="Alex and I on the train to a concert"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">Joe Perry and Fan Fiction</p>
+                </section>
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+
+        <div class="page" id="page-4">
+            <header class="header-tape">
+                <h1>What an Adventure</h1>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame">
+                        <img src="img/ConcertSelfies.jpg" alt="Alex and I at the concert" class="scrapbook-image">
+                    </div>
+                    <p class="caption">Selfies were not my thing.</p>
+                </section>
+                <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame">
+                        <img src="img/TorontoGround.jpg" alt="Alex and I sitting on the ground in Toronto"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">Crazy to sit in a toronto corner like this.</p>
+                </section>
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+        <div class="page" id="page-5">
+            <header class="header-tape">
+                <h1>We spent more time together</h1>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame">
+                        <img src="img/MiniPuttFace.jpg" alt="A friendly game of miniput. Not a date!"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">"I am a feminist"</p>
+                </section>
+                <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame">
+                        <img src="img/LateFroster1.jpg" alt="Late night froster run."
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">Sleeping over all the time</p>
+                </section>
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+        <div class="page" id="page-6">
+            <header class="header-tape">
+                <h1>We spent even more time together</h1>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame">
+                        <img src="img/Squish Selfie1.jpg" alt="A picture of alex and I on the couch"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">Wearing one anothers clothes..</p>
+                </section>
+                <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame">
+                        <img src="img/MirrorPosingGoth.jpg" alt="Alex and I posing in the mirror with goth style"
+                            class="scrapbook-image">
+                    </div>
+                    <p class="caption">and still not dating.</p>
+                </section>
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+        <div class="page" id="page-7">
+            <header class="header-tape">
+                <h1>Somehow still not dating</h1>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame">
+                        <img src="img/gothkissing.jpg" alt="Alex and I kissing in goth style" class="scrapbook-image">
+                    </div>
+                    <p class="caption">Somehow...</p>
+                </section>
+                <section class="memo-pad">
+                    <h3>The Lesbian FwB Lovestory</h3>
+                    <p>We were just friends for a long time. We spent so much time together, we just naturally became each
+                        other's go-to person for everything. We were there for each other through everything, and
+                        eventually we just fell in love. It was the most natural thing in the world, and it still is.
+                    </p>
+                </section>
+
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+        <div class="page" id="page-8">
+            <header class="header-tape">
+                <h1>Return to the City</h1>
+            </header>
+            <main class="page-spread">
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame">
+                        <img src="img/WaitingToronto1.jpg" alt="Waiting for the bus" class="scrapbook-image">
+                    </div>
+                    <p class="caption">Waiting for the bus for a day trip. Just as friends :D</p>
+                </section>
+                <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame">
+                        <img src="img/BusToronto1.jpg" alt="Riding the bus to Toronto" class="scrapbook-image">
+                    </div>
+                    <p class="caption">Friends pose like this right?</p>
+                </section>
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+                <div class="page" id="page-9">
+            <header class="header-tape">
+                <h1>Todays the Day</h1>
+            </header>
+            <main class="page-spread">
+                   <section class="photo-slot polaroid rotate-left">
+                    <div class="photo-frame">
+                        <img src="img/IMG_43111.jpg" alt="She asked me out" class="scrapbook-image">
+                    </div>
+                    <p class="caption">"Get married in like 30 years" "30 YEARS?"</p>
+                </section>
+                <section class="photo-slot polaroid rotate-right">
+                    <div class="photo-frame">
+                        <img src="img/WaitingToronto1.jpg" alt="Waiting for the bus" class="scrapbook-image">
+                    </div>
+                    <p class="caption">Waiting for the bus for a day trip. Just as friends :D</p>
+                </section>
+                <div class="corner-flip back" onclick="prevPage()"></div>
+                <div class="corner-flip" onclick="nextPage()"></div>
+        </div>
+
+        <div class="page" id="page-12">
+            <header class="header-tape">
+                <h1>To Be Continued...</h1>
+            </header>
+            <main class="final-page">
+                <div class="heart-container">
+                    <p>Happy Valentine's Day, Alex!</p>
+                    <span class="big-heart">💖</span>
+                </div>
             </main>
+            <div class="corner-flip back" onclick="prevPage()"></div>
         </div>
     </div>
 
-    <footer class="controls">
-        <button onclick="prevPage()">Back</button>
-        <button onclick="nextPage()">Flip Page</button>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
